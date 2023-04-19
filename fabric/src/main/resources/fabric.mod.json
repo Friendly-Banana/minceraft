@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "minceraft",
+  "version": "${version}",
+  "name": "minceraft",
+  "description": "Shows the special title screen \"Minceraft\" more often.",
+  "authors": ["Banana"],
+  "contact": {},
+  "license": "All Rights Reserved",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [
+    "minceraft.mixins.json",
+    "minceraft-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": ">=${minecraft_version}",
+    "forgeconfigapiport": ">=${forgeconfigfabric_version}"
+  }
+}
