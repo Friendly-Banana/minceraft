@@ -18,7 +18,7 @@ public class Minceraft {
         builder.comment("Chance the title screen spells Minceraft");
         minceraftChance = builder.defineInRange("chance", 1.0E-4, 0, 1);
         builder.comment("Speed of the title changing color. Use 0 to disable");
-        rgbSpeed = builder.define("rgbSpeed", 0.001);
+        rgbSpeed = builder.define("rgbSpeed", 0.005);
         GENERAL_SPEC = builder.build();
     }
 
