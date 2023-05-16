@@ -4,12 +4,21 @@
   "version": "${version}",
   "name": "${mod_name}",
   "description": "${mod_description}",
-  "authors": ["Banana"],
+  "authors": [
+    "Banana"
+  ],
   "contact": {},
   "license": "All Rights Reserved",
   "icon": "icon.png",
   "environment": "client",
-  "entrypoints": {},
+  "entrypoints": {
+    "main": [
+      "me.banana.minceraft.fabric.MinceraftFabric"
+    ],
+    "modmenu": [
+      "me.banana.minceraft.fabric.ModMenuIntegration"
+    ]
+  },
   "mixins": [
     "minceraft.mixins.json",
     "minceraft-common.mixins.json"
@@ -18,5 +27,8 @@
     "fabricloader": ">=${fabric_loader_version}",
     "minecraft": ">=${minecraft_version}",
     "forgeconfigapiport": ">=${forgeconfigfabric_version}"
+  },
+  "recommends": {
+    "modmenu": "*"
   }
 }

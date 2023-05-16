@@ -1,25 +1,16 @@
 package me.banana.minceraft;
 
-import net.minecraftforge.common.ForgeConfigSpec;
-
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 
 public class Minceraft {
     public static final String MOD_ID = "minceraft";
 
-    public static ForgeConfigSpec GENERAL_SPEC;
-    public static final ForgeConfigSpec.DoubleValue minceraftChance;
-    public static final ForgeConfigSpec.ConfigValue<Double> rgbSpeed;
+    public static ModConfig config;
 
     public static void init() {
-    }
-
-    static {
-        var builder = new ForgeConfigSpec.Builder();
-        builder.comment("Chance the title screen spells Minceraft");
-        minceraftChance = builder.defineInRange("chance", 1.0E-4, 0, 1);
-        builder.comment("Speed of the title changing color. Use 0 to disable");
-        rgbSpeed = builder.define("rgbSpeed", 0.005);
-        GENERAL_SPEC = builder.build();
+        AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
+        config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
     }
 
     public static float[] HsvToRgb(float hue, float saturation, float brightness) {

@@ -1,0 +1,6 @@
+{
+  "text.autoconfig.minceraft.title": "Minceraft",
+  "text.autoconfig.minceraft.option.minceraftChance": "Chance title is spelled Minceraft",
+  "text.autoconfig.minceraft.option.rgbSpeed": "Speed of colour change",
+  "text.autoconfig.minceraft.option.rgbSpeed.@Tooltip": "Set to 0 to disable"
+}
