@@ -4,7 +4,7 @@ import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
-@Config(name = "minceraft")
+@Config(name = Minceraft.MOD_ID)
 public class ModConfig implements ConfigData {
     @ConfigEntry.BoundedDiscrete(min = 0, max = 1)
     public double minceraftChance = 1.0E-4;
